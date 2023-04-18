@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+
+
+
+    <div class="container mb-3 py-4">
+        <form method="post" action="{% url 'homepage' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="from-group mb-3">
+                <!-- text taking -->
+                    <h1 class="text-center">Enter the Product Details </h1>
+                    <br>
+                <h2>Name of the Product</h2>
+                <input name="Product Name" placeholder="Enter the Name of Product" type="text" class="form-control"
+                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+            <hr>
+            <div class="from-group mb-3">
+                <!-- number taking -->
+
+                <label style="font-size:22px; padding:10px" for="Administrative">Administrative Duration: </label>
+                <input name="Administrative" type="text" class="form-control"
+                    placeholder="Enter Administrative Duration"
+                    aria-label="Dollar amount (with dot and two decimal places)">
+            </div>
+
+            <hr>
+            <div class="from-group mb-3">
+                <!-- number taking -->
+                <label style="font-size:22px; padding:10px" for="Informational">Informational Duration:</label>
+                <input name="Informational" type="text" class="form-control" placeholder="Enter Informational Duration"
+                    aria-label="Dollar amount (with dot and two decimal places)">
+            </div>
+
+            <hr>
+            <div class="from-group mb-3">
+                <!-- number taking -->
+                <label style="font-size:22px; padding:10px" for="Administrative">Was the Product Related (if it was then
+                    on the scale of 0-300): </label>
+
+                <input name="ProductRelated" type="text" class="form-control"
+                    placeholder="Enter Was the Product Related (if it was then on the scale of 0-300): "
+                    aria-label="Dollar amount (with dot and two decimal places)">
+            </div>
+
+            <hr>
+            <div class="from-group">
+                <!-- number taking -->
+                <label style="font-size:22px; padding:10px" for="Administrative">Did the customer go from this
+                    product to any related product afterwards (0-0.2): </label>
+                <input name="BounceRates" type="text" class="form-control" placeholder="Enter Did the customer go from this product to any related product afterwards (0-0.2): " aria-label="Dollar amount (with dot and two decimal places)">
+            </div>
+
+            <hr>
+            <div class="from-group ">
+                <!-- number taking -->
+                <label style="font-size:22px; padding:10px" for="Administrative">Customer exited the website after the
+                    said product (0-0.2): </label>
+                <input name="ExitRates" type="text" class="form-control"
+                    placeholder="Enter Customer exited the website after the said product (0-0.2): "
+                    aria-label="Dollar amount (with dot and two decimal places)">
+            </div>
+
+            <hr>
+            <div class="from-group ">
+                <!-- number taking -->
+                <label style="font-size:22px; padding:10px" for="Administrative">Page Value (0-100):</label>
+                <input name="PageValues" type="text" class="form-control" placeholder="Enter Page Value (0-100) "
+                    aria-label="Dollar amount (with dot and two decimal places)">
+            </div>
+
+            <hr>
+            <div class="from-group ">
+                <label style="font-size:22px; padding:10px" for="Administrative">Is it a Special Day like New Year's day
+                    (0-1.0): </label>
+                <input name="SpecialDay" type="text" class="form-control"
+                    placeholder="Enter Special Day like New Year's day (0-1.0) "
+                    aria-label="Dollar amount (with dot and two decimal places)">
+            </div>
+
+            <hr>
+
+            <label style="font-size:22px; padding:10px" for="Administrative">Which Operating System was used: </label>
+            <select name="OperatingSystems" class="form-select form-select-lg mb-3"
+                aria-label=".form-select-lg example">
+                <option selected>Open this select menu</option>
+                <option value="1">Windows 10</option>
+                <option value="2">Linux</option>
+                <option value="3">Mac OS</option>
+                <option value="4">Windows 8</option>
+                <option value="5">Windows 7</option>
+                <option value="6">Ubuntu Specifically</option>
+                <option value="7">BSD</option>
+                <option value="8">Windows XP</option>
+            </select>
+
+            <hr>
+
+            <label style="font-size:22px; padding:10px" for="Administrative">Which Browser was used: </label>
+            <select name="Browser" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <option selected>Open this select menu</option>
+                <option value="1">Google Chrome</option>
+                <option value="2">Microsoft Edge</option>
+                <option value="3">Safari</option>
+                <option value="4">Opera</option>
+                <option value="5">Brave</option>
+                <option value="6">Vivaldi</option>
+                <option value="7">Internet Explorer 10</option>
+                <option value="8">UC Browser</option>
+                <option value="9">Opera mini</option>
+                <option value="10">Tor Browser</option>
+                <option value="11">Chromium</option>
+                <option value="12">Internet Explorer 9</option>
+                <option value="13">Other</option>
+            </select>
+
+            <hr>
+
+            <label style="font-size:22px; padding:10px" for="Administrative">Which Region: </label>
+            <select name="Region" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <option selected>Open this select menu</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+
+            <hr>
+
+            <label style="font-size:22px; padding:10px" for="Administrative">How much traffic was observed (1-6):
+            </label>
+            <select name="TrafficType" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <option selected>Open this select menu</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+
+            <hr>
+
+            <label style="font-size:22px; padding:10px" for="Administrative">Type of visitor:
+            </label>
+            <select name="VisitorType" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <option selected>Open this select menu</option>
+                <option value="1">New Visitor</option>
+                <option value="2">Returning visitor</option>
+                <option value="3">Other visitor</option>
+            </select>
+
+            <hr>
+            <label style="font-size:22px; padding:10px" for="Administrative">Is it a weekend: </label>
+            <select name="weekend" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <option selected>Open this select menu</option>
+                <option value="1">True</option>
+                <option value="0">False</option>
+            </select>
+
+            <hr>
+            <div class="col-auto">
+                <button type="submit"  class="btn-primary" name="pred_button" value="Save&Next">Confirm Submission</button>
+            </div>
+        </form>
+        {% if result %}
+        <h2>The customer will generate {{ result }} Revenue </h2>
+        {% endif %}
+    </div>
+
+
+
+{% endblock body %}
+
+
+

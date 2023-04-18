@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static%}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+
+<div class="container my-3 p-2">
+  <h1 class="my-4 text-center p-3"  style="background-color:powderblue">Welcome to the Customer Revenue Prediction WebApp </h1>
+  <h1 class="my-4 text-center p-3">View our various API's to predict customer revenue </h1>
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <img src= "{% static "th.jpeg"%}" alt="" width="200" height="200">
+
+        <h2>Google product revenue (API 1) </h2>
+        <p>By Clicking Here You Can Predict Google's Customer revenue.</p>
+        <p><a class="btn btn-info" href="/customer">View API 1 &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img src= "{% static "thh.jpeg"%}" alt="" width="200" height="200">
+
+        <h2>Amazon product revenue (API 2) </h2>
+        <p>By Clicking Here You Can Predict Amazon's Customer revenue.</p>
+        <p><a class="btn btn-info" href="/customer">View API 2 &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img src="{% static "thhhh.jpeg"%}" alt="" width="200" height="200" >
+
+        <h2>Flipkart product revenue (API 3)</h2>
+        <p>By Clicking Here You Can Predict Flipkart's Customer revenue.</p>
+        <p><a class="btn btn-info" href="/customer">View API 3 &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+
+
+
+    <div class="row featurette m-3 x-3 p-5">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">To Buy Our API's Fill the form </h2>
+        <p class="lead">To purchase the API of our Customer revenue Prediction WebApp, you will have to contact us, by entering your little information and telling your problem, message us in the contact box and then we will contact you.</p>
+        <p><a class="btn btn-info" href="/contact">Buy Our API &raquo;</a></p>
+
+
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="https://source.unsplash.com/300x220/?api,computer" alt="">
+      </div>
+    </div>
+
+
+
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+</div>
+{% endblock body %}

@@ -1,0 +1,32 @@
+
+1) DecisionTreeClassifier 
+
+    criterion='gini'-------------------->>0.8491484184914841
+    criterion='entropy'-------------------->>0.8527980535279805
+
+
+2) KNeighborsClassifier
+
+    with 5 n_neighbors ---------------------->> 0.8824006488240065
+    with 100 n_neighbors ---------------------->> 0.8775344687753447
+    
+
+3) naive_bayes
+    GaussianNB------------------------------->> 0.7757502027575021
+    MultinomialNB------------------------------->> 0.8787510137875101
+    BernoulliNB------------------------------->> 0.862124898621249
+
+
+4) RandomForestClassifier
+    n_estimators=1000 ,criterion='gini' ------------------>> 0.8949716139497161
+
+
+5) Support Vector Classification Model
+
+    SVC with kernel rbf ------------->> 0.889294403892944 
+    SVC with kernel Polynomial ------------->> 0.875506893755069
+    SVC with kernel Linear ------------->> 0.884022708840227 
+
+
+
+By analyzing all the models, we can say that Random Forest is giving good results. 
